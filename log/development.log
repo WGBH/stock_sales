@@ -4,3 +4,355 @@ Started GET "/" for 127.0.0.1 at 2014-10-21 13:59:44 -0400
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
 Completed 200 OK in 63ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-21 15:58:36 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 78ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-21 15:58:48 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (0.6ms)
+Completed 500 Internal Server Error in 183ms
+
+ActionView::Template::Error (File to import not found or unreadable: compass.
+Load paths:
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/images
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/images
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/turbolinks-2.4.0/lib/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/vendor/assets/stylesheets
+  (in /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets/application.css.scss:18)):
+     6:   
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Styleguide" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= csrf_meta_tags %>
+    11:   </head>
+    12: 
+  app/assets/stylesheets/application.css.scss:18
+  app/views/layouts/styleguide.html.erb:9:in `_app_views_layouts_styleguide_html_erb__4211561472307187108_2183470460'
+
+
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.7ms)
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:25:01 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (9.6ms)
+Completed 200 OK in 1545ms (Views: 1515.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styleguide.css?body=1" for 127.0.0.1 at 2014-10-22 10:25:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-22 10:25:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-22 10:25:03 -0400
+
+
+Started GET "/assets/styleguide.js?body=1" for 127.0.0.1 at 2014-10-22 10:25:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-22 10:25:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-22 10:25:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-22 10:25:03 -0400
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:25:11 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (0.1ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (File to import not found or unreadable: compass.
+Load paths:
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/images
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/images
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/turbolinks-2.4.0/lib/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/vendor/assets/stylesheets
+  (in /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets/application.css.scss:18)):
+     6:   
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Styleguide" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= csrf_meta_tags %>
+    11:   </head>
+    12: 
+  app/assets/stylesheets/application.css.scss:18
+  app/views/layouts/styleguide.html.erb:9:in `_app_views_layouts_styleguide_html_erb__654525268473732139_2167307820'
+
+
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.4ms)
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:27:04 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (0.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (File to import not found or unreadable: compass.
+Load paths:
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/images
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/images
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/turbolinks-2.4.0/lib/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/vendor/assets/stylesheets
+  (in /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets/application.css.scss:18)):
+     6:   
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Styleguide" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= csrf_meta_tags %>
+    11:   </head>
+    12: 
+  app/assets/stylesheets/application.css.scss:18
+  app/views/layouts/styleguide.html.erb:9:in `_app_views_layouts_styleguide_html_erb__654525268473732139_2167307820'
+
+
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (27.6ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.6ms)
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:27:21 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (1.2ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (File to import not found or unreadable: compass.
+Load paths:
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/images
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/images
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/turbolinks-2.4.0/lib/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/vendor/assets/stylesheets
+  (in /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets/application.css.scss:18)):
+     6:   
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Styleguide" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= csrf_meta_tags %>
+    11:   </head>
+    12: 
+  app/assets/stylesheets/application.css.scss:18
+  app/views/layouts/styleguide.html.erb:9:in `_app_views_layouts_styleguide_html_erb___2582488064422842451_2190469720'
+
+
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.6ms)
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:34:28 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (0.1ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (File to import not found or unreadable: compass.
+Load paths:
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/images
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/stock_sales/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/images
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/turbolinks-2.4.0/lib/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/anthony_vatousiou/Repositories/vendor/assets/stylesheets
+  (in /Users/anthony_vatousiou/Repositories/stock_sales/app/assets/stylesheets/application.css.scss:18)):
+     6:   
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Styleguide" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= csrf_meta_tags %>
+    11:   </head>
+    12: 
+  app/assets/stylesheets/application.css.scss:18
+  app/views/layouts/styleguide.html.erb:9:in `_app_views_layouts_styleguide_html_erb___2582488064422842451_2190469720'
+
+
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:34:40 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (1.3ms)
+Completed 200 OK in 1362ms (Views: 1351.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styleguide.css?body=1" for 127.0.0.1 at 2014-10-22 10:34:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-22 10:34:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-22 10:34:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-22 10:34:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-22 10:34:41 -0400
+
+
+Started GET "/assets/styleguide.js?body=1" for 127.0.0.1 at 2014-10-22 10:34:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-22 10:34:41 -0400
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:35:18 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (0.1ms)
+Completed 200 OK in 2628ms (Views: 2627.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-22 10:35:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-22 10:35:21 -0400
+
+
+Started GET "/assets/styleguide.css?body=1" for 127.0.0.1 at 2014-10-22 10:35:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-22 10:35:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-22 10:35:21 -0400
+
+
+Started GET "/assets/styleguide.js?body=1" for 127.0.0.1 at 2014-10-22 10:35:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-22 10:35:21 -0400
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/index.html.erb within layouts/styleguide (0.0ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styleguide.css?body=1" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+
+
+Started GET "/assets/styleguide.js?body=1" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-22 10:36:26 -0400
+
+
+Started GET "/styleguide" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+Processing by StyleguideController#index as HTML
+  Rendered styleguide/_typography.html.erb (1.3ms)
+  Rendered styleguide/_code.html.erb (0.4ms)
+  Rendered styleguide/_tables.html.erb (0.7ms)
+  Rendered styleguide/_forms.html.erb (1.5ms)
+  Rendered styleguide/_buttons.html.erb (0.7ms)
+  Rendered styleguide/_images.html.erb (0.3ms)
+  Rendered styleguide/_icons.html.erb (0.8ms)
+  Rendered styleguide/_dropdowns.html.erb (0.5ms)
+  Rendered styleguide/_button_groups.html.erb (1.0ms)
+  Rendered styleguide/_navs.html.erb (0.8ms)
+  Rendered styleguide/_navbar.html.erb (0.8ms)
+  Rendered styleguide/_breadcrumbs.html.erb (0.4ms)
+  Rendered styleguide/_pagination.html.erb (0.7ms)
+  Rendered styleguide/_labels.html.erb (0.5ms)
+  Rendered styleguide/_typographic_components.html.erb (0.3ms)
+  Rendered styleguide/_thumbnails.html.erb (0.5ms)
+  Rendered styleguide/_alerts.html.erb (0.4ms)
+  Rendered styleguide/_progress_bars.html.erb (0.6ms)
+  Rendered styleguide/_misc.html.erb (0.4ms)
+  Rendered styleguide/index.html.erb within layouts/styleguide (100.8ms)
+Completed 200 OK in 164ms (Views: 163.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styleguide.css?body=1" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/styleguide.js?body=1" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2014-10-22 12:19:21 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-22 13:30:34 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/anthony_vatousiou/.rvm/gems/ruby-2.1.1/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)

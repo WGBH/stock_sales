@@ -38,7 +38,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-sass'
-gem 'compass'
+gem 'compass-rails', '~> 1.1.7'
 
 group :test do
   gem 'rspec'
