@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
@@ -21,6 +20,22 @@
 @import "compass/layout/grid-background";
 //@import "compass/css3/gradient";
 @import "compass/css3/border-radius";
+
 @import "compass/typography/text/replacement";
 
 @import "bootstrap";
+
+/* Links */
+$red_link: #f4583d;
+
+/* Include all the partials */
+@import 'base/fonts';
+@import 'base/colors';
+@import 'base/units';
+@import 'partials/_facets';
+@import 'partials/_layout';
+@import 'partials/_header';
+
+@import 'base/modules';
+@import 'base/base';
+
