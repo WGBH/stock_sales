@@ -40,7 +40,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'compass-rails', '~> 1.1.7'
 
-group :test do
+group :test, :development do
   gem 'rspec'
   gem 'rspec-rails'
 end
