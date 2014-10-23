@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get 'styleguide' => 'styleguide#index'
 
+  #  TODO
+  #  root to: "something"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
