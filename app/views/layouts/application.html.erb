@@ -1,15 +1,15 @@
 <!-- TODO: add something for flash messages? -->
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Stocksales</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Stocksales</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
-
-</body>
+  <body>
+    <%= render partial: 'layouts/main_nav' %>
+    <%= yield %>
+  </body>
 </html>
