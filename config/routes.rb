@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get 'styleguide' => 'styleguide#index'
 
-  #  TODO
-  #  root to: "something"
+  root to: "home#home"
+  get "home/home", to: 'home#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
