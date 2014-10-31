@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    fields = [:first_name, :last_name, :email, :password, :password_confirmation,
+    fields = [:first_name, :last_name, :email, :password, :password_confirmation, :current_password, 
       :remember_me, :company, :phone, :fax, :address1, :address2, :city, :state, :zipcode]
 
     devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:email, :password, :remember_me) }
