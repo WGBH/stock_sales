@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :password_confirmation, message: "must be same as password"
   validates_presence_of :first_name, message: "can't be blank"
   validates_presence_of :last_name, message: "can't be blank"
   validates_presence_of :phone, message: "can't be blank"
