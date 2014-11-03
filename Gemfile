@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'compass-rails', '~> 1.1.7'
+gem 'activeadmin', github: 'activeadmin'
 
 group :test, :development do
   gem 'rspec'
