@@ -10,6 +10,20 @@
 
   <body>
     <%= render partial: 'layouts/main_nav' %>
-    <%= yield %>
+
+    <div id="bd_prod">
+      <div id="main">
+        <div id="main_container">
+          <%= render partial: 'layouts/flash_msg' %>
+          <%= content_for?(:content) ? yield(:content) : yield %>
+        </div>
+      </div>
+
+      <div id="sidebar">
+        <%= sidebar.join('').html_safe %>
+      </div>
+
+      <div class="clear-both"/>
+    </div>
   </body>
 </html>
