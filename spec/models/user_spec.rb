@@ -19,12 +19,6 @@ describe User do
     expect(user).to_not be_valid
   end
 
-  it "is not valid without password confirmation" do
-    user = User.new(email: "email@test.com", password: "password", first_name: "Test",
-      last_name: "User", phone: "1234567890")
-    expect(user).to_not be_valid
-  end
-
   it "password and password confirmation must be the same" do
     user = User.new(email: "email@test.com", password: "password", password_confirmation: "wordpass",
       first_name: "Test", last_name: "User", phone: "1234567890")
