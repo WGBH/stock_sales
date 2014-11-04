@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users, controllers: { registrations: "registrations" }
-  ActiveAdmin.routes(self)
   get 'styleguide/index'
 
   get 'styleguide' => 'styleguide#index'
