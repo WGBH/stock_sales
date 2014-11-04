@@ -45,4 +45,5 @@ gem 'activeadmin', github: 'activeadmin'
 group :test, :development do
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'byebug'
 end
