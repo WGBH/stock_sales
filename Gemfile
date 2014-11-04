@@ -44,4 +44,5 @@ gem 'compass-rails', '~> 1.1.7'
 group :test, :development do
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'byebug'
 end
