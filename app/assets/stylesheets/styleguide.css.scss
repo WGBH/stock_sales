@@ -1,3 +1,114 @@
 // Place all the styles related to the styleguide controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bs-example:after {
+  content: "Example";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #959595;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bs-example {
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #fff;
+  border-color: #ddd;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  box-shadow: none;
+}
+
+.bs-example {
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0 15px 15px;
+  border-style: solid;
+}
+
+.bs-callout+.bs-callout {
+  margin-top: -5px;
+}
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.bs-callout-info h4 {
+  color: #5bc0de
+}
+
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+
+ul.inline {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+ul.inline li { display: inline; }
+
+ul.inline li a {
+  text-decoration: none;
+  padding: .2em 1em;
+  color: #fff;
+}
+
+.bs-navbar-top-example:after {
+  top: auto;
+  bottom: 15px;
+}
+
+.bs-navbar-bottom-example {
+  padding-top: 45px;
+}
+
+.bs-navbar-top-example {
+  padding-bottom: 45px;
+}
+
+.bs-navbar-top-example,
+.bs-navbar-bottom-example {
+  z-index: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.bs-navbar-top-example .navbar-fixed-top,
+.bs-navbar-bottom-example .navbar-fixed-bottom {
+  position: absolute;
+}
+
+

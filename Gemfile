@@ -37,8 +37,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Recommended for use with bootstrap to add browser vendor prefixes automatically
+gem 'autoprefixer-rails'
+
 gem 'devise'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.0'
 gem 'compass-rails', '~> 1.1.7'
 gem 'activeadmin', github: 'activeadmin'
 
