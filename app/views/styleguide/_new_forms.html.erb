@@ -1,0 +1,533 @@
+<div class="bs-docs-section">
+  <h1 id="forms" class="page-header">Forms</h1>
+  <h2 id="basic-example">Basic Example</h2>
+  <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+    <div class="bs-example">
+      <form role="form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">
+            Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+        &lt;input type="file" id="exampleInputFile"&gt;
+        &lt;p class="help-block"&gt;Example block-level help text here.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="checkbox"&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox"&gt; Check me out
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  </pre>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Don't mix form groups with input groups</h4>
+    <p>Do not mix form groups directly with input groups. Instead, nest the input groups inside of the form group.</p>
+  </div>
+  <h2 id="inline-form">Inline forms</h2>
+  <p>Add <code>.form-inline</code> to your <code>&lt;form&gt;</code> for left-aligned and inline-block controls. <strong>This only applies to forms within viewports that are at least 768px wide.</strong></p>
+  <div class="bs-callout bs-callout-danger">
+    <h4>Requires custom widths</h4>
+    <p>Inputs and selects have <code>width: 100%;</code> applied by default in Bootstrap. Within inline forms, we reset that to <code>width: auto;</code> so multiple controls can reside on the same line. Depending on your layout, additional custom widths may be required.</p>
+  </div>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Always add labels</h4>
+    <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class.</p>
+  </div>    
+    <div class="bs-example">
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">@</div>
+            <input class="form-control" type="email" placeholder="Enter email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputPassword2">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">
+            Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Sign in</button>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form class="form-inline" role="form"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label class="sr-only" for="exampleInputEmail2"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email"&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;div class="input-group"&gt;
+          &lt;div class="input-group-addon"&gt;@&lt;/div&gt;
+          &lt;input class="form-control" type="email" placeholder="Enter email"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label class="sr-only" for="exampleInputPassword2"&gt;Password&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"&gt;
+      &lt;/div&gt;
+      &lt;div class="checkbox"&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox"&gt; Remember me
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button type="submit" class="btn btn-default"&gt;Sign in&lt;/button&gt;
+    &lt;/form&gt;
+  </pre>
+  <h2 id="horizontal-form">Horizontal forms</h2>
+  <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form. Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
+    <div class="bs-example">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form class="form-horizontal" role="form"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="inputEmail3" class="col-sm-2 control-label"&gt;Email&lt;/label&gt;
+        &lt;div class="col-sm-10"&gt;
+          &lt;input type="email" class="form-control" id="inputEmail3" placeholder="Email"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="inputPassword3" class="col-sm-2 control-label"&gt;Password&lt;/label&gt;
+        &lt;div class="col-sm-10"&gt;
+          &lt;input type="password" class="form-control" id="inputPassword3" placeholder="Password"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;div class="col-sm-offset-2 col-sm-10"&gt;
+          &lt;div class="checkbox"&gt;
+            &lt;label&gt;
+              &lt;input type="checkbox"&gt; Remember me
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;div class="col-sm-offset-2 col-sm-10"&gt;
+          &lt;button type="submit" class="btn btn-default"&gt;Sign in&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  </pre>
+  <hr class="bs-docs-separator">
+  <h2 id="forms-controls">Supported controls</h2>
+  <p>Examples of standard form controls supported in an example form layout.</p>
+  <h3>Inputs</h3>
+  <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
+  <div class="bs-callout bs-callout-danger">
+    <h4>Type declaration required</h4>
+    <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
+  </div>
+    <div class="bs-example">
+      <form role="form">
+        <input type="text" class="form-control" placeholder="Text input">
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;input type="text" class="form-control" placeholder="Text input"&gt;
+    &lt;/form&gt;
+  </pre>
+  <div class="bs-callout bs-callout-info">
+    <h4>Input groups</h4>
+    <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, check out the input group component.</p>
+  </div>
+  <h3>Textarea</h3>
+  <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+    <div class="bs-example">
+      <form role="form">
+        <textarea class="form-control" rows="3"></textarea>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;textarea class="form-control" rows="3"&gt;&lt;/textarea&gt;
+    &lt;/form&gt;
+  </pre>
+  <h3>Checkboxes and radios</h3>
+  <p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+  <p>A checkbox or radio with the <code>disabled</code> attribute will be styled appropriately. To have the <code>&lt;label&gt;</code> for the checkbox or radio also display a "not-allowed" cursor when the user hovers over the label, add the <code>.disabled</code> class to your <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, <code>.checkbox-inline</code>, or <code>&lt;fieldset&gt;</code>.</p>
+  <h4>Default (stacked)</h4>
+    <div class="bs-example">
+      <form role="form">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value>
+            Option one is this and that-be sure to include why it's great
+          </label>
+        </div>
+        <div class="checkbox disabled">
+          <label>
+            <input type="checkbox" value disabled>
+            Option two is disabled
+          </label>
+        </div>
+        <br>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            Option one is this and that-be sure to include why it's great
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Option two can be something else and selecting it will deselect option one
+          </label>
+        </div>
+        <div class="radio disabled">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+            Option three is disabled
+          </label>
+        </div>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;div class="checkbox"&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox" value=""&gt;
+          Option one is this and that&mdash;be sure to include why it's great
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="checkbox disabled"&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox" value="" disabled&gt;
+          Option two is disabled
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="radio"&gt;
+        &lt;label&gt;
+          &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+          Option one is this and that&mdash;be sure to include why it's great
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="radio"&gt;
+        &lt;label&gt;
+          &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+          Option two can be something else and selecting it will deselect option one
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="radio disabled"&gt;
+        &lt;label&gt;
+          &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
+          Option three is disabled
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  </pre>
+  <h4>Inline checkboxes and radios</h4>
+  <p>Use the <code>.checkbox-inline</code> or <code>.radio-inline</code> classes on a series of checkboxes or radios for controls that appear on the same line.</p>
+    <div class="bs-example">
+      <form role="form">
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox1" value="option1">
+          1
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox2" value="option2">
+          2
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox3" value="option3">
+          3
+        </label>
+      </form>
+      <br>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          3
+        </label>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;label class="checkbox-inline"&gt;
+        &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
+      &lt;/label&gt;
+      &lt;label class="checkbox-inline"&gt;
+        &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
+      &lt;/label&gt;
+      &lt;label class="checkbox-inline"&gt;
+        &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
+      &lt;/label&gt;
+    &lt;/form&gt;
+    
+    &lt;form role="form"&gt;
+      &lt;label class="radio-inline"&gt;
+        &lt;input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"&gt; 1
+      &lt;/label&gt;
+      &lt;label class="radio-inline"&gt;
+        &lt;input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"&gt; 2
+      &lt;/label&gt;
+      &lt;label class="radio-inline"&gt;
+        &lt;input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"&gt; 3
+      &lt;/label&gt;
+    &lt;/form&gt;
+  </pre>
+  <h4>Checkboxes and radios without labels</h4>
+  <p>Should you have no text within the <code>&lt;label&gt;</code>, the input is positioned as you'd expect. <strong>Currently only works on non-inline checkboxes and radios.</strong></p>
+    <div class="bs-example">
+      <form role="form">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="blankRadio" id="blankRadio1" value=option1">
+          </label>
+        </div>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;div class="checkbox"&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox" id="blankCheckbox" value="option1"&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="radio"&gt;
+        &lt;label&gt;
+          &lt;input type="radio" name="blankRadio" id="blankRadio1" value="option1"&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  </pre>
+  <h3>Selects</h3>
+  <p>Use the default option, or add <code>multiple</code> to show multiple options at once.</p>
+    <div class="bs-example">
+      <form role="form">
+        <select class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <br>
+        <select multiple class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;select class="form-control"&gt;
+        &lt;option&gt;1&lt;/option&gt;
+        &lt;option&gt;2&lt;/option&gt;
+        &lt;option&gt;3&lt;/option&gt;
+        &lt;option&gt;4&lt;/option&gt;
+        &lt;option&gt;5&lt;/option&gt;
+      &lt;/select&gt;
+      
+      &lt;select multiple class="form-control"&gt;
+        &lt;option&gt;1&lt;/option&gt;
+        &lt;option&gt;2&lt;/option&gt;
+        &lt;option&gt;3&lt;/option&gt;
+        &lt;option&gt;4&lt;/option&gt;
+        &lt;option&gt;5&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/form&gt;
+  </pre>
+  <hr class="bs-docs-separator">
+  <h2 id="forms-controls-static">Static control</h2>
+  <p>When you need to place plain text next to a form label within a form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p>
+    <div class="bs-example">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">email@example.com</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          </div>
+        </div>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form class="form-horizontal" role="form"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label class="col-sm-2 control-label"&gt;Email&lt;/label&gt;
+        &lt;div class="col-sm-10"&gt;
+          &lt;p class="form-control-static"&gt;email@example.com&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="inputPassword" class="col-sm-2 control-label"&gt;Password&lt;/label&gt;
+        &lt;div class="col-sm-10"&gt;
+          &lt;input type="password" class="form-control" id="inputPassword" placeholder="Password"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  </pre> 
+    <div class="bs-example">
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only">Email</label>
+          <p class="form-control-static">email@example.com</p>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword2" class="sr-only">Password</label>
+          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Confirm identity</button>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form class="form-inline" role="form"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label class="sr-only"&gt;Email&lt;/label&gt;
+        &lt;p class="form-control-static"&gt;email@example.com&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group&gt;
+        &lt;label for="inputPassword2" class="sr-only"&gt;Password&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="inputPassword2" placeholder="Password"&gt;
+      &lt;/div&gt;
+      &lt;button type="submit" class="btn btn-default"&gt;Confirm identity&lt;/button&gt;
+    &lt;/form&gt;
+  </pre>
+  <hr class="bs-docs-separator">
+  <h2 id="forms-control-focus">Input focus</h2>
+  <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
+    <div class="bs-example">
+      <form role="form">
+        <input class="form-control" id="focusedInput" type="text" value="Demonstrative focus state">
+      </form>
+    </div>
+  <div class="bs-callout bs-callout-info">
+    <h4>Demo <code>:focus</code> state</h4>
+    <p>The above example input uses custom styles in bootstrap documentation to demonstrate the <code>:focus</code> state on a <code>.form-control</code>.</p>
+  </div>
+  <hr class="bs-docs-separator">
+  <h2 id="forms-control-disabled">Disabled inputs</h2>
+  <p>Add the <code>disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.</p>
+    <div class="bs-example">
+      <form role="form">
+        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+      </form>
+    </div>
+  <pre class="prettyprint linenums">
+    &lt;form role="form"&gt;
+      &lt;input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled&gt;
+    &lt;/form&gt;
+  </pre>
+  <h3 id="forms-disabled-fieldsets">Disabled fieldsets</h3>
+  <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within the <code>&lt;fieldset&gt;</code> at once.</p>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Caveat about link functionality of <code>&lt;a&gt;</code></h4>
+    <p>Our styles use <code>pointer-events: none</code> to try to disable the link functionality of <code>&lt;a class="btn btn-*"&gt;</code> buttons in this case, but that CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11. So to be safe, use custom JavaScript to disable such links.</p>
+  </div>
+  <div class="bs-callout bs-callout-danger">
+    <h4>Cross-browser compatibility</h4>
+    <p>While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the <code>disabled</code> attribute on a <code>&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
+  </div>
+    <div class="bs-example">
+      <form role="form">
+        <fieldset disabled>
+          <div class="form-group">
+            <label for="disabledTextInput">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+          </div>
+          <div class="form-group">
+            <label for="disabledSelect">Disabled select menu</label>
+            <select id="disabledSelect" class="form-control">
+              <option>Disabled select</option>
+            </select>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              Can't check this
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  
+</div>
