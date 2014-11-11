@@ -3,53 +3,83 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="form-input"><%= f.label :email %>
-  <%= f.email_field :email, autofocus: true %></div>
+  <div class="form-group">
+    <label for="inputEmail">Email</label>
+    <input type="email" name="user[email]" class="form-control" id="inputEmail" placeholder="Email" autofocus="true">
+  </div>
 
-  <div class="form-input"><%= f.label :password %>
-  <%= f.password_field :password, autocomplete: "off" %>
-  <i>(leave blank if you don't want to change it)</i></div>
+  <div class="form-group">
+    <label for="inputPassword">Password</label>
+    <input type="password" name="user[password]" class="form-control" id="inputPassword">
+    <p class="help-block">(Leave blank if you don't want to change it)</p>
+  </div>
 
-  <div class="form-input"><%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+  <div class="form-group">
+    <label for="inputPasswordConfirmation">Password confirmation</label>
+    <input type="password" name="user[password_confirmation]" class="form-control" id="inputPasswordConfirmation">
+  </div>
 
-  <div class="form-input"><%= f.label :first_name %>
-  <%= f.text_field :first_name %></div>
+  <div class="form-group">
+    <label for="inputFirstName">First name</label>
+    <input type="text" name="user[first_name]" class="form-control" id="inputFirstName">
+  </div>
 
-  <div class="form-input"><%= f.label :last_name %>
-  <%= f.text_field :last_name %></div>
+  <div class="form-group">
+    <label for="inputLastName">Last name</label>
+    <input type="text" name="user[last_name]" class="form-control" id="inputLastName">
+  </div>
+  
+  <div class="form-group">
+    <label for="inputCompany">Company</label>
+    <input type="text" name="user[company]" class="form-control" id="inputCompany">
+  </div>
+ 
+  <div class="form-group">
+    <label for="inputPhone">Phone</label>
+    <input type="text" name="user[phone]" class="form-control" id="inputPhone">
+  </div>
 
-  <div class="form-input"><%= f.label :company %>
-  <%= f.text_field :company %></div>
+  <div class="form-group">
+    <label for="inputFax">Fax</label>
+    <input type="text" name="user[fax]" class="form-control" id="inputFax">
+  </div>
+ 
+  <div class="form-group">
+    <label for="inputAddress1">Address 1</label>
+    <input type="text" name="user[address1]" class="form-control" id="inputAddress1">
+  </div>
 
-  <div class="form-input"><%= f.label :phone %>
-  <%= f.text_field :phone %></div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" name="user[address2]" class="form-control" id="inputAddress2">
+  </div>
 
-  <div class="form-input"><%= f.label :fax %>
-  <%= f.text_field :fax %></div>
+  <div class="form-group">
+    <label for="inputCity">City</label>
+    <input type="text" name="user[city]" class="form-control" id="inputCity">
+  </div>
+  
+  <div class="form-group">
+    <label for="inputState">State</label>
+    <input type="text" name="user[state]" class="form-control" id="inputState">
+  </div>
+ 
+  <div class="form-group">
+    <label for="inputZipcode">Zip code</label>
+    <input type="text" name="user[zipcode]" class="form-control" id="inputZipcode">
+  </div>
 
-  <div class="form-input"><%= f.label :address1 %>
-  <%= f.text_field :address1 %></div>
-
-  <div class="form-input"><%= f.label :address2 %>
-  <%= f.text_field :address2 %></div>
-
-  <div class="form-input"><%= f.label :city %>
-  <%= f.text_field :city %></div>
-
-  <div class="form-input"><%= f.label :state %>
-  <%= f.text_field :state %></div>
-
-  <div class="form-input"><%= f.label :zipcode %>
-  <%= f.text_field :zipcode %></div><br />
+  <br>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :current_password %> <i>(we need your current password if you want to change your email or password)</i><br />
-  <%= f.password_field :current_password, autocomplete: "off" %></div>
-
+  <div class="form-group">
+    <label for="inputCurrentPassword">Current password</label>
+    <input type="password" name="user[current_password]" class="form-control" id="inputCurrentPassword">
+     <p class="help-block">(We need your current password if you want to change your email or password)</p>
+  </div>
   <button type="submit" class="btn btn-primary">Update</button>
 <% end %>
 

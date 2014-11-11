@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'styleguide/index'
 
   get 'styleguide' => 'styleguide#index'
+  get 'new_styleguide' => 'styleguide#new_index' 
 
   root to: "home#home"
   get "home/home", to: 'home#home'
