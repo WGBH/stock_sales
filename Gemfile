@@ -40,7 +40,7 @@ gem 'spring',        group: :development
 # Recommended for use with bootstrap to add browser vendor prefixes automatically
 gem 'autoprefixer-rails'
 
-gem 'blacklight', '>= 5.3.0'
+gem 'blacklight', '~> 5.7.2'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'compass-rails', '~> 1.1.7'

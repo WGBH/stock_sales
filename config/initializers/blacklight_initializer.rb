@@ -3,5 +3,5 @@
 # will use the application's secret key base instead.
 #
 
-# Blacklight.secret_key = 'f304dafa43f9fdde9ab458d1a85bad81cbcfb5a960514bd2f176a7cd9f5faccd3397e172164b22e25442123e4a800864fe5b7bf7e6a6ecdd4671e7cc07eb4723'
+# Blacklight.secret_key = '25324a0b6539d78fe7bd497013e822c37bde853efddc180ebcf5d0bcb49fcabe3a4f65904349e2e60ccdb5d201e149479ff129355466b439aaaca053addbaf64'
 
