@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103151501) do
+ActiveRecord::Schema.define(version: 20141112203049) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -27,6 +27,28 @@ ActiveRecord::Schema.define(version: 20141103151501) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+
+  create_table "bookmarks", force: true do |t|
+    t.integer  "user_id",       null: false
+    t.string   "user_type"
+    t.string   "document_id"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "document_type"
+  end
+
+  add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id"
+
+  create_table "searches", force: true do |t|
+    t.text     "query_params"
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "searches", ["user_id"], name: "index_searches_on_user_id"
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
