@@ -5,3 +5,7 @@ tmp
 # Ignore the default SQLite database
 db/*.sqlite3
 *.DS_store
+
+# Ignore jetty
+jetty
+
