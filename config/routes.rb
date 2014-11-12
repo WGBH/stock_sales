@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root :to => "catalog#index"
+  blacklight_for :catalog
   ActiveAdmin.routes(self)
   devise_for :users, controllers: { registrations: "registrations" }
   get 'styleguide/index'
