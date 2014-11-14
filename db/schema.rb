@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113193300) do
+ActiveRecord::Schema.define(version: 20141114203150) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -43,6 +43,9 @@ ActiveRecord::Schema.define(version: 20141113193300) do
   create_table "hero_images", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "alt"
+    t.string   "image"
   end
 
   create_table "searches", force: true do |t|
@@ -54,6 +57,11 @@ ActiveRecord::Schema.define(version: 20141113193300) do
   end
 
   add_index "searches", ["user_id"], name: "index_searches_on_user_id"
+
+  create_table "sidekick_images", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
