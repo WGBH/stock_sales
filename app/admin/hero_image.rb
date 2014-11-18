@@ -21,4 +21,14 @@ ActiveAdmin.register HeroImage do
     column :image
     actions
   end
+ 
+  form( html: { multipart: true } ) do |f|
+    f.inputs "Details" do
+      f.input :title
+      f.input :alt
+      f.input :image, as: :file
+    end
+    f.actions
+  end
+
 end
