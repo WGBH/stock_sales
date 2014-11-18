@@ -9,3 +9,6 @@ db/*.sqlite3
 # Ignore jetty
 jetty
 
+# Ignore uploads
+public/uploads
+
