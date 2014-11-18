@@ -24,4 +24,14 @@ ActiveAdmin.register SidekickImage do
     actions
   end
 
+  form( html: { multipart: true } ) do |f|
+    f.inputs "Details" do
+      f.input :title
+      f.input :alt
+      f.input :image, as: :file
+      f.input :url
+      f.input :order
+    end
+    f.actions
+  end
 end
