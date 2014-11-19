@@ -47,6 +47,7 @@ gem 'compass-rails', '~> 1.1.7'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave'
+gem 'mini_magick'
 
 group :test, :development do
   gem 'rspec'
