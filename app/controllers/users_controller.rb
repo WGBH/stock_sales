@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout "user_profile"  
 
   before_filter :authenticate_user!
   before_filter :set_body_class
