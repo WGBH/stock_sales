@@ -1,4 +1,3 @@
-<!-- TODO: add something for flash messages? -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,6 +9,11 @@
 
   <body>
     <%= render partial: 'layouts/main_nav' %>
+
+
+    <% if content_for?(:hero) %>
+      <%= yield(:hero) %>
+    <% end %>
 
     <div id="bd_prod">
       <div id="main">
