@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class HeroImageUploader < CarrierWave::Uploader::Base
+class SidekickImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -36,8 +36,8 @@ class HeroImageUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
 
-  # Resize images as they are uploaded:
-  process resize_to_fit: [1500, 1500]
+  # Resizes uploaded images for fitting on the home page
+  process resize_to_fit: [500, 500]
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

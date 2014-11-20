@@ -1,0 +1,8 @@
+<div class="col-md-12">
+  <% @sidekick_imgs.each do |img| %>
+    <div class="col-md-6">
+      <a href="<%= img.url %>"><img src="<%= img.image.url %>" alt="<%= img.alt %>"</img></a>  
+    </div>
+  <% end %>
+</div>
+
