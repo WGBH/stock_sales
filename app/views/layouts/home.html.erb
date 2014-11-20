@@ -10,24 +10,20 @@
   <body>
     <%= render partial: 'layouts/main_nav' %>
 
+    <%= render partial: 'hero_image' %>
 
-    <% if content_for?(:hero) %>
-      <%= yield(:hero) %>
-    <% end %>
-
-    <div id="bd_prod">
-      <div id="main">
-        <div id="main_container">
-          <%= render partial: 'layouts/flash_msg' %>
-          <%= content_for?(:content) ? yield(:content) : yield %>
+    <div id="main">
+      <div id="main-container">
+        <div class="row">
+          <div class="col-md-5">
+            <%= render partial: 'sidekick_images' %>
+          </div>
+          <div class="col-md-7">
+            <%= render partial: 'layouts/flash_msg' %>
+            <%= content_for?(:content) ? yield(:content) : yield %>
+          </div>
         </div>
       </div>
-
-      <div id="sidebar">
-        <%= sidebar.join('').html_safe %>
-      </div>
-
-      <div class="clear-both"/>
     </div>
   </body>
 </html>
