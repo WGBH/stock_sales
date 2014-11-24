@@ -1,0 +1,14 @@
+#user_layout {
+  margin-top: 20px;
+}
+
+#pricing-info {
+  background-color: #cccccc;
+  .price-column {
+    width: 50%;
+    display: inline-block;
+  }
+  p {
+    margin: 10px;
+  }
+}

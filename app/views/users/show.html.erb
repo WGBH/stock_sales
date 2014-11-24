@@ -1,14 +1,12 @@
 <div class="row">
-  <div class="col-md-12">
-    <div class="col-md-4">
-      <%= render partial: 'user_info' %>
-    </div>
-    <div class="col-md-8">
-      <%= render partial: 'layouts/flash_msg' %>
-      <%= render partial: 'pricing_info' %>
-    </div>
+  <div class="col-md-4">
+    <%= render partial: 'user_info' %>
   </div>
-  <div class="col-md-12">
-    <%= render partial: 'shopping_cart' %>
+  <div class="col-md-8">
+    <%= render partial: 'layouts/flash_msg' %>
+    <%= render partial: 'pricing_info' %>
   </div>
-</div> 
+</div>
+<div class="row">
+  <%= render partial: 'shopping_cart' %>
+</div>
