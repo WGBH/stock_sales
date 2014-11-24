@@ -1,1 +1,14 @@
-<h2>User Info to go here!</h2>
+<h2><%= @user.full_name %></h2><span><%= link_to 'Edit Your Account', edit_user_registration_path %></span>
+<ul>
+  <li><p><strong>Email: </strong><%= @user.email %></p></li>
+  <li><p><strong>Phone: </strong><%= @user.phone %></p></li>
+  <li>
+    <address>
+      <strong>Address:</strong><br>
+      <%= @user.address1 %><br>
+      <%= @user.city %> <%= @user.state %> <%= @user.zipcode %>
+    </address>
+  </li>
+  <li><p><strong>Company: </strong><%= @user.company %></p></li>
+  <li><p><strong>Fax: </strong><%= @user.fax %></p></li>
+</ul>
