@@ -1,2 +1,9 @@
-<div class="jumbotron" title= "<%= @hero_img.title %>" style="background-image: url(<%= @hero_url %>)">
+<% hero_title ||= 'No image currently published' %>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="jumbotron" title= "<%= @hero_img.title %>" style="background-image: url(<%= hero_url %>)">
+      <%= hero_title %>
+    </div>
+  </div>
 </div>

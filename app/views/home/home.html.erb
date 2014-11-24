@@ -1,10 +1,13 @@
+<%= render partial: 'hero_image', locals: {hero_url: @hero_img.try(:url), hero_title: @hero_img.try(:title) } %>
+  
 <div class="row">
-  <div class="col-md-9">
-    <%= "Stuff" %> 
+
+  <div class="col-md-5">
+    <%= render partial: 'sidekick_images', locals: {sidekick_images: @sidekick_images } %>
   </div>
-  <div class="col-md-3">
-    <ul class="nav nav-list">
-      <li class="nav-header">More stuff</li>
-    </ul>
+
+  <div class="col-md-7">
+    <%= render partial: 'layouts/flash_msg' %>
+    <%= render partial: 'blog' %>
   </div>
 </div>

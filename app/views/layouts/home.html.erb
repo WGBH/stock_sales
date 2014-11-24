@@ -8,27 +8,14 @@
   </head>
 
   <body>
+
     <%= render partial: 'layouts/main_nav' %>
 
     <div id="main">
       <div id="main-container">
-
-        <div class="row">
-          <div class="col-md-12">
-            <%= render partial: 'hero_image' %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-5">
-            <%= render partial: 'sidekick_images' %>
-          </div>
-          <div class="col-md-7">
-            <%= render partial: 'layouts/flash_msg' %>
-            <%= content_for?(:content) ? yield(:content) : yield %>
-          </div>
-        </div>
+        <%= yield %>
       </div>
     </div>
+
   </body>
 </html>
