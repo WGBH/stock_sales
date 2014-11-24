@@ -10,10 +10,15 @@
   <body>
     <%= render partial: 'layouts/main_nav' %>
 
-    <%= render partial: 'hero_image' %>
-
     <div id="main">
       <div id="main-container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <%= render partial: 'hero_image' %>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-md-5">
             <%= render partial: 'sidekick_images' %>
