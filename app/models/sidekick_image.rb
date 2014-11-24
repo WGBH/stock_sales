@@ -6,6 +6,7 @@ class SidekickImage < ActiveRecord::Base
   validate :must_have_image_file
   validates_presence_of :url
   validates_presence_of :order
+  validates_uniqueness_of :order
 
   def must_have_image_file
     if image.file.nil? || image.file.file.blank?

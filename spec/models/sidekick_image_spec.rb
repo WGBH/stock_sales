@@ -32,6 +32,16 @@ describe SidekickImage do
       expect(sidekick).to_not be_valid
     end
 
+    it 'is not valid with same order as existing SidekickImage' do
+      sidekick1 = SidekickImage.new(title: 'title', alt: 'alt', url: 'url', order: 3)
+      sidekick1[:image] = 'image.jpg'
+      sidekick1.save!
+      sidekick2 = SidekickImage.new(title: 'title', alt: 'alt', url: 'url', order: 3)
+      sidekick2[:image] = 'image.jpg'
+      expect(sidekick1).to be_valid
+      expect(sidekick2).to_not be_valid
+    end
+
     it 'is valid with all of the above attributes' do
       sidekick = SidekickImage.new(title: 'title', alt: 'alt', url: 'url', order: 3)
       sidekick[:image] = 'image.jpg'
