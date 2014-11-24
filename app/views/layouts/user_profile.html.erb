@@ -3,6 +3,7 @@
   <head>
     <title>Stocksales</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'partials/_user_layout' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
@@ -10,10 +11,8 @@
   <body>
     <%= render partial: 'layouts/main_nav' %>
 
-    <div id="main">
-      <div id="main_container">
-        <%= content_for?(:content) ? yield(:content) : yield %>
-      </div>
+    <div id="user_layout" class="container">
+      <%= content_for?(:content) ? yield(:content) : yield %>
     </div>
   </body>
 </html>
