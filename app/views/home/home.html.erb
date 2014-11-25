@@ -1,9 +1,9 @@
-<%= render partial: 'hero_image', locals: {hero_url: @hero_img.try(:url), hero_title: @hero_img.try(:title) } %>
+<%= render partial: 'hero_image', locals: {hero_url: @hero_img.try(:image).url, hero_title: @hero_img.try(:title) } %>
   
 <div class="row">
 
   <div class="col-md-5">
-    <%= render partial: 'sidekick_images', locals: {sidekick_images: @sidekick_images } %>
+    <%= render partial: 'sidekick_images', locals: {sidekick_images: @sidekick_imgs } %>
   </div>
 
   <div class="col-md-7">
