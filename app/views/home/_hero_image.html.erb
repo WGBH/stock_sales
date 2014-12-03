@@ -3,7 +3,9 @@
 <div class="row">
   <div class="col-md-12">
     <div class="jumbotron" title= "<%= hero_title %>" style="background-image: url(<%= hero_url %>)">
-      <%= hero_title %>
+      <div class="search-container">
+        <%= render_search_bar %>
+      </div>
     </div>
   </div>
 </div>
