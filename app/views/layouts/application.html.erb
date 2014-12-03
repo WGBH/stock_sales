@@ -11,19 +11,29 @@
   <body>
     <%= render partial: 'layouts/main_nav' %>
 
-    <div id="bd_prod">
-      <div id="main">
-        <div id="main_container">
-          <%= render partial: 'layouts/flash_msg' %>
-          <%= content_for?(:content) ? yield(:content) : yield %>
+    <div id="body" class="row-fluid">
+      <% if controller.action_name == 'index' && controller.controller_name == 'catalog' %>
+        <div id="search_page">
+          <div class="row" id="content">
+            <%= yield %>
+          </div>
         </div>
-      </div>
+      <% else %>
+        <div id="bd_prod">
+          <div id="main">
+            <div id="main_container">
+              <%= render partial: 'layouts/flash_msg' %>
+              <%= content_for?(:content) ? yield(:content) : yield %>
+            </div>
+          </div>
+        
+          <div id="sidebar">
+            <%= sidebar.join('').html_safe %>
+          </div>
 
-      <div id="sidebar">
-        <%= sidebar.join('').html_safe %>
-      </div>
-
-      <div class="clear-both"/>
+          <div class="clear-both"/>
+        </div>
+      <% end %>
     </div>
   </body>
 </html>
