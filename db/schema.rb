@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114203923) do
+ActiveRecord::Schema.define(version: 20141210142533) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -39,6 +39,25 @@ ActiveRecord::Schema.define(version: 20141114203923) do
   end
 
   add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id"
+
+  create_table "clips", force: true do |t|
+    t.string   "orig_format"
+    t.string   "tape_id"
+    t.string   "series"
+    t.string   "program"
+    t.string   "date_portrayed"
+    t.string   "event_loc"
+    t.string   "c_title"
+    t.string   "desc"
+    t.string   "keywords"
+    t.string   "category"
+    t.string   "start_tc"
+    t.string   "end_tc"
+    t.string   "duration"
+    t.string   "broadcast_format"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "hero_images", force: true do |t|
     t.datetime "created_at"
