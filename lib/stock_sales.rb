@@ -1,0 +1,4 @@
+module StockSales
+
+
+end
