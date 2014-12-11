@@ -1,6 +1,7 @@
 class CreateClips < ActiveRecord::Migration
   def change
     create_table :clips do |t|
+      t.string :clip_id
       t.string :orig_format
       t.string :tape_id
       t.string :series

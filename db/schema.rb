@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20141210142533) do
   add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id"
 
   create_table "clips", force: true do |t|
+    t.string   "clip_id"
     t.string   "orig_format"
     t.string   "tape_id"
     t.string   "series"
