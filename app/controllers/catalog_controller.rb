@@ -4,8 +4,6 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
-  layout "blacklight"
- 
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = { 
