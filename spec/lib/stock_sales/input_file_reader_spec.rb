@@ -58,4 +58,18 @@ describe StockSales::InputFileReader do
       expect(sample_input.generate_hash(row).values).to eq []
     end    
   end
+
+  describe '#generate_all_hashes' do
+    it 'returns an array of hashes with each element corresponding to a row of input' do
+      expect(described_class.new("spec/fixtures/sample_input_with_correct_headers.csv").generate_all_hashes).to eq [{'id'=>'cell 1,2', 'desc'=>'cell 1,3'}, {'id'=>'cell 2,2', 'desc'=>'cell 2,3'}]
+    end
+  end
+
+  describe '#ingest' do
+    it 'creates Clips from the input file' do
+      described_class.new("spec/fixtures/sample_input_with_correct_headers.csv").ingest
+      expect(Clip.first.clip_id).to eq "cell 1,2"
+      expect(Clip.first.desc).to eq "cell 1,3"
+    end
+  end 
 end

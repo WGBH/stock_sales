@@ -29,10 +29,28 @@ module StockSales
       end
     end
 
-    def generate_all_hashes
-      for n in 1...(@input_rows - 1)
-        generate_hash(@input_rows[n]) 
+    def ingest
+      generate_all_hashes.each do |hash|
+        clip = Clip.new 
+        hash.each do |key, value|
+          if key == 'id'
+            clip["clip_id"] = value
+          elsif value == 'NULL'
+            clip["#{key}"] = nil
+          else
+            clip["#{key}"] = value 
+          end
+        end
+        clip.save!
       end
+    end
+
+    def generate_all_hashes
+      array = []
+      for n in 1...(@input_rows.size)
+        array << generate_hash(@input_rows[n]) 
+      end
+      array
     end
 
     def generate_hash(row)
