@@ -35,6 +35,8 @@ module StockSales
         hash.each do |key, value|
           if key == 'id'
             clip["clip_id"] = value
+          elsif value == 'NULL'
+            clip["#{key}"] = nil
           else
             clip["#{key}"] = value 
           end
@@ -45,7 +47,7 @@ module StockSales
 
     def generate_all_hashes
       array = []
-      for n in 1...(@input_rows.size - 1)
+      for n in 1...(@input_rows.size)
         array << generate_hash(@input_rows[n]) 
       end
       array

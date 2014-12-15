@@ -16,6 +16,7 @@ class CreateClips < ActiveRecord::Migration
       t.string :end_tc
       t.string :duration
       t.string :broadcast_format
+      t.string :aspect
       t.timestamps
     end
   end
