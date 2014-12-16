@@ -8,3 +8,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w(partials/_user_layout.css)
 Rails.application.config.assets.precompile += %w(partials/_search_form.css)
 
+Rails.application.config.assets.precompile += %w(search_results.js)
