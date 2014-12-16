@@ -259,6 +259,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jettywrapper (~> 1.7)
   jquery-rails
+  kaminari
   mini_magick
   rails (= 4.1.4)
   rspec

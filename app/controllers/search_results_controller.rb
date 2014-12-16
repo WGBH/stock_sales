@@ -1,5 +1,5 @@
 class SearchResultsController < ApplicationController
   def index
-    @search_results = Clip.all
+    @clips = Clip.order(:created_at).page(params[:page])
   end
 end
