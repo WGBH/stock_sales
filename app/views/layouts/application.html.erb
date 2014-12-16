@@ -12,10 +12,15 @@
     <%= render partial: 'layouts/main_nav' %>
 
     <div id="body" class="row-fluid">
-      <% if controller.action_name == 'index' && controller.controller_name == 'catalog' %>
+      <% if controller.action_name == 'index' && controller.controller_name == 'search_results' %>
         <div id="search_page">
           <div class="row" id="content">
-            <%= yield %>
+            <div class="col-md-2" id="sidebar">
+              <%= sidebar.join('').html_safe %>
+            </div>
+            <div class="col-md-10" id="search_results">
+              <%= yield %>
+            </div>
           </div>
         </div>
       <% else %>

@@ -48,6 +48,7 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'kaminari'
 
 group :test, :development do
   gem 'rspec'
