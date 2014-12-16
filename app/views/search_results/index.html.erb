@@ -1,7 +1,9 @@
 <h1>Search Results</h1>
 
-<div class="row">
-  <%= render @clips %>
+<div id="search_results">
+  <div class="row page">
+    <%= render @clips %>
+  </div>
 </div>
 
 <%= paginate @clips %>
