@@ -1,3 +1,13 @@
 <div class="clip col-md-3">
   <%= image_tag(clip.thumb) %>
+  <div class="row">
+    <div class="col-md-9">
+      <p class="lead"><strong><%= clip.duration %></strong></p> 
+    </div>
+    <% if clip.category == "18" %>
+      <div class="col-md-3">
+        <%= image_tag("HD_icon.png") %>
+      </div>
+    <% end %>
+  </div>
 </div>
